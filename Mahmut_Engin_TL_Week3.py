@@ -31,3 +31,59 @@ Exit
 5- When listing tasks, they should be sorted by their sequence number.
 
 6- Appropriate feedback should be given to the user after each operation. For example, when a new task is added, they should see a message indicating that the task has been added."""
+
+gorevlerim ={}
+ide = 0
+tamalanan_gorevler ={}
+def gorev_ekle():
+    global ide
+    while True:
+        gorev =input("Gorevini giriniz: (Cikmak icin 'q'):\n")
+        if gorev.lower()=="q":
+            break
+        durum =input("Durumu giriniz \nBeklemede  \nTamamlandi \nSilindi \n")
+        if durum.lower()=="Silindi":
+            for key, value in gorevlerim.items():
+                if "Silindi" in value[1]:
+                    gorevlerim[key]= ["Görev: " + gorev, "Durum: " + durum]
+        else:         
+            ide +=1
+            gorevlerim[ide]=["Gorev:" +gorev, "Durum:" +durum]
+    return gorevlerim
+def gorev_tamamla():
+    no=input("Durumunu degistireceginiz gorevin numarasini girin\n")
+    if int(no) in gorevlerim:
+        gorevlerim[int(no)][1]="Durum: Tamamlandi"
+    return gorevlerim
+
+def gorev_sil():
+    no=input("Silmek istediginiz gorevin numarasini girin \n")
+    if int(no) in gorevlerim:
+        gorevlerim[int(no)][1]="Durum: Silindi"
+    return gorevlerim
+def tamamlanan_listele():
+    for id, (gorev, durum) in gorevlerim.items():
+        if durum =="Durum:Tamamlandi":
+            print(f"{id}.{gorev} | {durum}")
+
+def tum_gorevleri_listele():
+    for id, (gorev, durum) in gorevlerim.items():
+        print(f"{id}.{gorev} | {durum}")
+while True:
+    secim = input(" Seciminizi Giriniz: (1-6) \n")
+    if secim =="1":
+        gorev_ekle()
+    elif secim=="2":
+        gorev_tamamla()
+    elif secim =="3":
+        gorev_sil()
+    elif secim =="4":
+        tamamlanan_listele()
+    elif secim=="5":
+        tum_gorevleri_listele()
+    elif secim =="6":
+        print("Programdan cikiliyor")
+        break
+    else:
+         print("Geçersiz seçim, lütfen 1-6 arasında bir değer giriniz.\n")
+    
