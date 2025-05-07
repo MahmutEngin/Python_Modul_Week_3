@@ -1,53 +1,3 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "4ff1e416",
-   "metadata": {},
-   "source": [
-    "###Soru 1: Görev Yöneticisi Uygulaması\n",
-    "Proje Açıklaması: Bu ödevde, Python programlama dilini kullanarak bir görev yöneticisi uygulaması oluşturacaksınız. Bu uygulama kullanıcıların görevlerini eklemelerine, tamamlamalarına, silmelerine ve listelemelerine olanak tanıyacaktır.\n",
-    "\n",
-    "Gereksinimler:\n",
-    "1- Görevler bir Python listesinde saklanacak ve her görev bir sözlük olarak temsil edilecektir. Her görevin aşağıdaki özelliklere sahip olması gerekir:\n",
-    "\n",
-    "Sıra Numarası (Otomatik olarak atanır)\n",
-    "\n",
-    "Görev Adı\n",
-    "\n",
-    "Durum (Tamamlandı, Bekliyor veya Silindi)\n",
-    "\n",
-    "2- Kullanıcının yapabileceği işlemler:\n",
-    "\n",
-    "Yeni bir görev ekle\n",
-    "\n",
-    "Bir görevi tamamla\n",
-    "\n",
-    "Bir görevi sil\n",
-    "\n",
-    "Tamamlanan görevleri listele\n",
-    "\n",
-    "Tüm görevleri durumlarıyla birlikte listeleyin\n",
-    "\n",
-    "Çıkış\n",
-    "\n",
-    "3- Görevler eklenme sırasına göre otomatik olarak sıra numarası almalıdır.\n",
-    "\n",
-    "4- Silinen görev numaralarının yerine yeni görevler kaydedilmeli.\n",
-    "\n",
-    "5- Görevler listelenirken sıra numarasına göre sıralanmalıdır.\n",
-    "\n",
-    "6- Her işlemden sonra kullanıcıya uygun geri bildirim verilmelidir. Örneğin, yeni bir görev eklendiğinde, görevin eklendiğini belirten bir mesaj görmelidir."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "f98c7bcc",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "
 gorevler = []
 siradaki_numara = 1 
 
@@ -133,30 +83,4 @@ def menu():
             print(" geçerli bir seçenek girin.")
 
 
-menu()\n",
-    "       "
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.12.3"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+menu() 
